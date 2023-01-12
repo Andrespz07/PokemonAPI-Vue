@@ -37,11 +37,10 @@ export default {
     </template>
     <style lang="scss" scoped>
     body {
-  background: #efefbb;
-  background: linear-gradient(to right, #d4d3dd, #efefbb);
+  background: #fff;
+  // background: linear-gradient(to right, #d4d3dd, #efefbb);
   font-family: 'Lato', sans-serif;
   display: grid;
-  
   margin: 0 auto;
       #poke-container {
         margin: 18% 0 0 0;
@@ -51,16 +50,25 @@ export default {
             display: grid;
              width: 100%;
              grid-template-columns: repeat(4, 1fr);
+             margin: auto;
+             justify-content: center;
+             justify-items: center;
+             padding: 0%;
+             
               li {
                 display: grid;
                 justify-content: center;
-                background-color: #eee;
+                justify-items: center;
+                background-color: #252525;
                 box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
                 margin: 5%;
                 list-style: none;
                 text-transform: uppercase;
                 text-align: center;
+                font-weight: 700;
+                color: #fff;
                 padding: 1% 0 1% 0;
+                width: 50%;
                 .img-container {
                   display: grid;
                   
