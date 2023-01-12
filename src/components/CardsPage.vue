@@ -5,7 +5,7 @@ export default {
   setup() {
     const pokemons = ref({});
     onMounted(async () => {
-      const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0');
+      const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=150&offset=0');
       const data = await response.json();
       const results = await Promise.all(data.results.map(async pokemon => {
         const res = await fetch(pokemon.url);
@@ -20,7 +20,6 @@ export default {
 
 <template>
   <body>
-    <h1>Pokedex</h1>
     <div class="poke-container" id="poke-container">
       
       
@@ -46,40 +45,61 @@ export default {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-}
-h1 {
-  letter-spacing: 3px;
-}
-.poke-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: space-between;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-.pokemon {
-  background-color: #eee;
-  border-radius: 10px;
-  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
-  margin: 10px;
-  padding: 20px;
-  text-align: center;
-}
-.pokemon .img-container {
-  background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  text-align: center;
-  ;
-}
- .img-container img {
-  align-items: center;
+      #poke-container {
+        margin: 8% 0 0 0;
+        width: 100%;
+        max-width: 90%;
+          ul {
+            display: flex;
+             width: 100%;
+             max-width: 90%;
+              li {
+                display: flex;
+                flex-direction: row;
+                background-color: #eee;
+                box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+                border-radius: 10%;
+                list-style: none;
+                
+                .img-container {
 
+                }
+              }
+          }
+        
+      }
 }
-.pokemon .img-container img {
-  max-width: 90%;
-  margin-top: 20px;
-} 
+
+// .poke-container {
+//   display: flex;
+//   flex-wrap: wrap;
+//   align-items: space-between;
+//   justify-content: center;
+//   margin: 0 auto;
+//   max-width: 1200px;
+// }
+// .pokemon {
+//   background-color: #eee;
+//   border-radius: 10px;
+//   box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+//   margin: 10px;
+//   padding: 20px;
+//   text-align: center;
+// }
+// .pokemon .img-container {
+//   background-color: rgba(255, 255, 255, 0.6);
+//   border-radius: 50%;
+//   width: 120px;
+//   height: 120px;
+//   text-align: center;
+//   ;
+// }
+//  .img-container img {
+//   align-items: center;
+
+// }
+// .pokemon .img-container img {
+//   max-width: 90%;
+//   margin-top: 20px;
+// } 
 </style>
