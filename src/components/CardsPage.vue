@@ -70,37 +70,5 @@ export default {
         
       }
 }
-
-// .poke-container {
-//   display: grid;
-//   flex-wrap: wrap;
-//   align-items: space-between;
-//   justify-content: center;
-//   margin: 0 auto;
-//   max-width: 1200px;
-// }
-// .pokemon {
-//   background-color: #eee;
-//   border-radius: 10px;
-//   box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
-//   margin: 10px;
-//   padding: 20px;
-//   text-align: center;
-// }
-// .pokemon .img-container {
-//   background-color: rgba(255, 255, 255, 0.6);
-//   border-radius: 50%;
-//   width: 120px;
-//   height: 120px;
-//   text-align: center;
-//   ;
-// }
-//  .img-container img {
-//   align-items: center;
-
-// }
-// .pokemon .img-container img {
-//   max-width: 90%;
-//   margin-top: 20px;
-// } 
+ 
 </style>
