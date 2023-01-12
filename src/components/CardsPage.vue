@@ -5,7 +5,7 @@ export default {
   setup() {
     const pokemons = ref({});
     onMounted(async () => {
-      const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=150&offset=0');
+      const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=905&offset=0');
       const data = await response.json();
       const results = await Promise.all(data.results.map(async pokemon => {
         const res = await fetch(pokemon.url);
@@ -40,29 +40,30 @@ export default {
   background: #efefbb;
   background: linear-gradient(to right, #d4d3dd, #efefbb);
   font-family: 'Lato', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  
   margin: 0 auto;
       #poke-container {
-        margin: 8% 0 0 0;
+        margin: 18% 0 0 0;
         width: 100%;
-        max-width: 90%;
+        display: grid;
           ul {
-            display: flex;
+            display: grid;
              width: 100%;
-             max-width: 90%;
+             grid-template-columns: repeat(4, 1fr);
               li {
-                display: flex;
-                flex-direction: row;
+                display: grid;
+                justify-content: center;
                 background-color: #eee;
                 box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
-                border-radius: 10%;
+                margin: 5%;
                 list-style: none;
-                
+                text-transform: uppercase;
+                text-align: center;
+                padding: 1% 0 1% 0;
                 .img-container {
-
+                  display: grid;
+                  
                 }
               }
           }
@@ -71,7 +72,7 @@ export default {
 }
 
 // .poke-container {
-//   display: flex;
+//   display: grid;
 //   flex-wrap: wrap;
 //   align-items: space-between;
 //   justify-content: center;

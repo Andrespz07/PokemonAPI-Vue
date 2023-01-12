@@ -25,10 +25,10 @@
                         height: 50vh;
                         display: flex;
                         background-color: black;
-                        padding-top: 2%;
+                        padding-top: 4%;
                         padding-bottom: 2%;
-                        padding-right: 2%;
-                        padding-left: 2%;
+                        padding-right: 15%;
+                        padding-left: 15%;
                     }
             }
     }
